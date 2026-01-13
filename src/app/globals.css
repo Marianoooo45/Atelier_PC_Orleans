@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-red: #dc2626;
+  --brand-red-dark: #b91c1c;
+  --brand-red-glow: #ef4444;
+  --dark-950: #0a0a0a;
+  --dark-900: #0f0f0f;
+  --dark-800: #171717;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--dark-950);
+  color: white;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom glow utilities */
+@layer utilities {
+  .text-glow-red {
+    text-shadow: 0 0 20px rgba(220, 38, 38, 0.5);
+  }
+  
+  .border-glow-red {
+    box-shadow: 0 0 15px rgba(220, 38, 38, 0.3), inset 0 0 15px rgba(220, 38, 38, 0.1);
+  }
+  
+  .icon-glow-red {
+    filter: drop-shadow(0 0 8px rgba(220, 38, 38, 0.6));
+  }
+}
+
+/* Smooth transitions for interactive elements */
+a, button {
+  transition: all 0.2s ease-in-out;
+}
