@@ -35,6 +35,10 @@ export const metadata: Metadata = {
         index: true,
         follow: true,
     },
+    icons: {
+        icon: "/icon",
+        apple: "/icon",
+    },
 };
 
 const jsonLd = {
