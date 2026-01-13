@@ -10,6 +10,7 @@ import {
     ChevronRight,
     Sparkles,
     Settings,
+    Search,
 } from "lucide-react";
 import { Header, Footer, WHATSAPP_LINK } from "@/components/layout";
 
@@ -69,9 +70,9 @@ function HeroSection() {
                                 assemblées à la main avec une rigueur obsessionnelle.
                             </p>
                             <p className="text-gray-400 leading-relaxed">
-                                Pas de marges cachées sur le matériel. Vous achetez les pièces
-                                au meilleur prix, je fournis l&apos;expertise, le montage
-                                câble-caché et l&apos;optimisation BIOS.
+                                Pas de marges cachées sur le matériel. Je <strong>scanne le marché</strong> pour trouver
+                                vos composants au <strong>meilleur prix</strong> du web.
+                                Vous ne payez que mon expertise de montage.
                             </p>
                         </motion.div>
 
@@ -129,19 +130,24 @@ function HeroSection() {
 function TrustSection() {
     const features = [
         {
-            icon: Wrench,
-            title: "Montage Expert",
-            description: "Cable management invisible, airflow optimisé",
+            icon: Search,
+            title: "Sourcing Optimisé",
+            description: "Je déniche chaque composant au prix le plus bas (Amazon, Allemagne, etc.)",
         },
         {
-            icon: MapPin,
-            title: "Local & Direct",
-            description: "Basé à Saint-Denis-en-Val, contact direct sans intermédiaire",
+            icon: Wrench,
+            title: "Montage Expert",
+            description: "Cable management invisible, airflow optimisé, zéro poussière",
         },
         {
             icon: Cpu,
             title: "Performance Pure",
-            description: "Optimisation BIOS, tests de charge, zéro bloatware",
+            description: "Optimisation BIOS, tests de charge, Windows allégé",
+        },
+        {
+            icon: MapPin,
+            title: "Local & Direct",
+            description: "Basé à Saint-Denis-en-Val, SAV réactif et physique",
         },
     ];
 
@@ -149,7 +155,7 @@ function TrustSection() {
         <section className="relative py-12 md:py-16 bg-dark-900/50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
-                    className="grid md:grid-cols-3 gap-8 md:gap-12"
+                    className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-8"
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true, margin: "-100px" }}
