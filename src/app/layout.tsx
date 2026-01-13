@@ -37,6 +37,25 @@ export const metadata: Metadata = {
     },
 };
 
+const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ComputerStore",
+    name: "Atelier PC Orléans",
+    image: "https://www.montage-pc-orleans.fr/hero.png",
+    description:
+        "Montage de PC Gamer sur mesure, dépannage et optimisation à Orléans et dans le Loiret.",
+    address: {
+        "@type": "PostalAddress",
+        addressLocality: "Saint-Denis-en-Val",
+        postalCode: "45560",
+        addressCountry: "FR",
+    },
+    url: "https://www.montage-pc-orleans.fr",
+    telephone: "+33783944194",
+    priceRange: "€€",
+    areaServed: ["Orléans", "Loiret", "45"],
+};
+
 export default function RootLayout({
     children,
 }: Readonly<{
@@ -46,6 +65,10 @@ export default function RootLayout({
         <html lang="fr">
             <body className="antialiased bg-slate-950 text-white selection:bg-red-600 selection:text-white">
                 {children}
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                />
             </body>
         </html>
     );
