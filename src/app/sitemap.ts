@@ -1,9 +1,11 @@
 import { MetadataRoute } from 'next'
+import { builds } from '@/data/builds'
 
 const URL = "https://www.montage-pc-orleans.fr";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    return [
+    // Pages statiques
+    const staticRoutes: MetadataRoute.Sitemap = [
         {
             url: `${URL}`,
             lastModified: new Date(),
@@ -23,4 +25,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.9,
         },
     ]
+
+    // Pages dynamiques (Réalisations)
+    const buildRoutes: MetadataRoute.Sitemap = builds.map((build) => ({
+        url: `${URL}/realisations/${build.slug}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly',
+        priority: 0.7,
+    }))
+
+    return [...staticRoutes, ...buildRoutes]
 }
