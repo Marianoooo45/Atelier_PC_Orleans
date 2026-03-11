@@ -3,16 +3,8 @@
 import { motion } from "framer-motion";
 import {
     Wrench,
-    MessageCircle,
 } from "lucide-react";
 import Link from "next/link";
-
-// WhatsApp number
-const WHATSAPP_NUMBER = "33783944194";
-const WHATSAPP_MESSAGE = encodeURIComponent(
-    "Bonjour ! Je suis intéressé par vos services de montage PC."
-);
-const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
 
 // Header Component
 export function Header() {
@@ -54,18 +46,7 @@ export function Header() {
                         ))}
                     </nav>
 
-                    {/* CTA Button */}
-                    <motion.a
-                        href={WHATSAPP_LINK}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-4 py-2.5 bg-brand-red hover:bg-brand-red-dark text-white text-sm font-semibold rounded-lg shadow-red-glow hover:shadow-red-glow-lg transition-all"
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                    >
-                        <MessageCircle className="w-4 h-4" />
-                        <span className="hidden sm:inline">Demander un devis</span>
-                    </motion.a>
+
                 </div>
             </div>
         </header>
@@ -99,16 +80,7 @@ export function Footer() {
                             <br />
                             Basé à Saint-Denis-en-Val (45560).
                         </p>
-                        <motion.a
-                            href={WHATSAPP_LINK}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 text-brand-red hover:text-brand-red-glow font-medium"
-                            whileHover={{ x: 5 }}
-                        >
-                            <MessageCircle className="w-4 h-4" />
-                            Contactez-moi sur WhatsApp
-                        </motion.a>
+
                     </div>
 
                     {/* SEO Links */}
@@ -136,4 +108,4 @@ export function Footer() {
     );
 }
 
-export { WHATSAPP_LINK };
+

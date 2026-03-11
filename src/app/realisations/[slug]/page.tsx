@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import {
-    MessageCircle,
     Cpu,
     Monitor,
     HardDrive,
@@ -18,7 +17,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { Header, Footer, WHATSAPP_LINK } from "@/components/layout";
+import { Header, Footer } from "@/components/layout";
 import { getBuildBySlug, builds } from "@/data/builds";
 
 export default function BuildDetailPage() {
@@ -155,18 +154,7 @@ export default function BuildDetailPage() {
                                 </div>
                             </div>
 
-                            {/* CTA */}
-                            <motion.a
-                                href={WHATSAPP_LINK}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 px-6 py-3 bg-brand-red hover:bg-brand-red-dark text-white font-semibold rounded-lg shadow-red-glow transition-all"
-                                whileHover={{ scale: 1.02 }}
-                                whileTap={{ scale: 0.98 }}
-                            >
-                                <MessageCircle className="w-5 h-5" />
-                                Je veux un build similaire
-                            </motion.a>
+
                         </motion.div>
                     </div>
                 </div>

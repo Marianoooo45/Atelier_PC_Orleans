@@ -12,7 +12,7 @@ import {
     Settings,
     Search,
 } from "lucide-react";
-import { Header, Footer, WHATSAPP_LINK } from "@/components/layout";
+import { Header, Footer } from "@/components/layout";
 
 // Animation variants
 const fadeInUp = {
@@ -80,18 +80,7 @@ function HeroSection() {
                             variants={fadeInUp}
                             className="flex flex-col sm:flex-row gap-4"
                         >
-                            <motion.a
-                                href={WHATSAPP_LINK}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-brand-red hover:bg-brand-red-dark text-white font-semibold rounded-lg shadow-red-glow hover:shadow-red-glow-lg transition-all"
-                                whileHover={{ scale: 1.02 }}
-                                whileTap={{ scale: 0.98 }}
-                            >
-                                <MessageCircle className="w-5 h-5" />
-                                Discutons de votre projet
-                                <ChevronRight className="w-4 h-4" />
-                            </motion.a>
+
                             <a
                                 href="#services"
                                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white/5 hover:bg-white/10 text-white font-medium rounded-lg border border-white/10 transition-all"
@@ -315,21 +304,7 @@ function ServicesSection() {
                                 ))}
                             </ul>
 
-                            {/* CTA Button */}
-                            <motion.a
-                                href={WHATSAPP_LINK}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className={`flex items-center justify-center gap-2 w-full py-3 rounded-lg font-semibold transition-all ${service.popular
-                                    ? "bg-brand-red hover:bg-brand-red-dark text-white"
-                                    : "bg-white/5 hover:bg-white/10 text-white border border-white/10"
-                                    }`}
-                                whileHover={{ scale: 1.02 }}
-                                whileTap={{ scale: 0.98 }}
-                            >
-                                <MessageCircle className="w-4 h-4" />
-                                Réserver
-                            </motion.a>
+
                         </motion.div>
                     ))}
                 </motion.div>

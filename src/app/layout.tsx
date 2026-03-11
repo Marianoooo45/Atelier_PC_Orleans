@@ -51,7 +51,7 @@ const jsonLd = {
         addressCountry: "FR",
     },
     url: "https://www.montage-pc-orleans.fr",
-    telephone: "+33783944194",
+
     priceRange: "€€",
     areaServed: ["Orléans", "Loiret", "45"],
 };

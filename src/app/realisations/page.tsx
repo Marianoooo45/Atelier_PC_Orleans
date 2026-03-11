@@ -14,7 +14,7 @@ import {
     ArrowRight,
 } from "lucide-react";
 import Link from "next/link";
-import { Header, Footer, WHATSAPP_LINK } from "@/components/layout";
+import { Header, Footer } from "@/components/layout";
 import { builds } from "@/data/builds";
 
 const fadeInUp = {
@@ -128,34 +128,7 @@ export default function RealisationsPage() {
                 </div>
             </section>
 
-            {/* CTA */}
-            <section className="relative py-16 bg-dark-900/50">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                    >
-                        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                            Envie de voir votre PC ici ?
-                        </h2>
-                        <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-                            Contactez-moi pour discuter de votre projet. Que ce soit un budget serré ou une config no-limit, je trouverai la solution parfaite pour vous.
-                        </p>
-                        <motion.a
-                            href={WHATSAPP_LINK}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-8 py-4 bg-brand-red hover:bg-brand-red-dark text-white font-semibold rounded-lg shadow-red-glow hover:shadow-red-glow-lg transition-all"
-                            whileHover={{ scale: 1.02 }}
-                            whileTap={{ scale: 0.98 }}
-                        >
-                            <MessageCircle className="w-5 h-5" />
-                            Discutons de votre build
-                        </motion.a>
-                    </motion.div>
-                </div>
-            </section>
+
 
             <Footer />
         </main>

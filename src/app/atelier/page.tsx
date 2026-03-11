@@ -9,7 +9,7 @@ import {
     Clock,
     Heart,
 } from "lucide-react";
-import { Header, Footer, WHATSAPP_LINK } from "@/components/layout";
+import { Header, Footer } from "@/components/layout";
 
 const fadeInUp = {
     initial: { opacity: 0, y: 20 },
@@ -190,31 +190,7 @@ export default function AtelierPage() {
                 </div>
             </section>
 
-            {/* CTA */}
-            <section className="relative py-16">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                    >
-                        <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                            Prêt à construire votre <span className="text-brand-red">machine de guerre</span> ?
-                        </h2>
-                        <motion.a
-                            href={WHATSAPP_LINK}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-8 py-4 bg-brand-red hover:bg-brand-red-dark text-white font-semibold rounded-lg shadow-red-glow hover:shadow-red-glow-lg transition-all"
-                            whileHover={{ scale: 1.02 }}
-                            whileTap={{ scale: 0.98 }}
-                        >
-                            <MessageCircle className="w-5 h-5" />
-                            Discutons de votre projet
-                        </motion.a>
-                    </motion.div>
-                </div>
-            </section>
+
 
             <Footer />
         </main>
